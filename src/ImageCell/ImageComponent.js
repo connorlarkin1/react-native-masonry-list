@@ -34,7 +34,6 @@ export default class ImageComponent extends React.PureComponent {
 				width: width,
 				height: height,
 				margin: gutter / 2,
-				backgroundColor: "gainsboro",
 				...imageContainerStyle
 			}
 		};
