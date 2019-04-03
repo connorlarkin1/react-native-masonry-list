@@ -54,6 +54,8 @@ export default class MasonryList extends React.PureComponent {
 		onLongPressImage: PropTypes.func,
 
 		onEndReachedThreshold: PropTypes.number,
+
+		setClick: PropTypes.func
 	};
 
 	state = {
@@ -71,6 +73,14 @@ export default class MasonryList extends React.PureComponent {
 			);
 		}
 	}
+
+	componentDidMount(){
+		this.props.setClick(this.scrollTo);
+	}
+
+	scrollTo = (e = 0) => {
+      this._carousel.scrollToIndex(e);
+  };
 
 	componentWillReceiveProps = (nextProps) => {
 		if (nextProps.layoutDimensions.width && nextProps.layoutDimensions.height &&
@@ -351,6 +361,8 @@ export default class MasonryList extends React.PureComponent {
 	render() {
 		return (
 			<FlatList
+			  ref={(c) => { this._carousel = c; }}
+
 				style={{
 					flex: 1,
 					padding: (this.props.layoutDimensions.width / 100) * this.props.spacing / 2,
@@ -365,6 +377,7 @@ export default class MasonryList extends React.PureComponent {
 				onEndReachedThreshold={this.props.onEndReachedThreshold}
 				{...this.props.masonryFlatListColProps}
 				onEndReached={this._onCallEndReach}
+				
 				initialNumToRender={
 					this.props.initialColToRender
 						? this.props.initialColToRender
