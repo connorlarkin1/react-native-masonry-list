@@ -55,8 +55,8 @@ class Masonry extends React.PureComponent {
             PropTypes.node
         ]),
         onEndReachedThreshold: PropTypes.number,
-        
-        setClick: PropTypes.func
+        otherStyles: PropTypes.arrayOf
+
     }
 
     static defaultProps = {
@@ -70,7 +70,8 @@ class Masonry extends React.PureComponent {
         backgroundColor: "#fff",
         imageContainerStyle: {},
         onEndReachedThreshold: 25,
-        setClick: null
+        otherStyles: []
+
     }
 
     constructor(props) {
@@ -235,9 +236,6 @@ class Masonry extends React.PureComponent {
                     onLongPressImage={this.props.onLongPressImage}
 
                     onEndReachedThreshold={this.props.onEndReachedThreshold}
-                    scrollToIndex={this.props.scrollToIndex}
-                    setClick={this.props.setClick}
-                    
                 />
             </View>
         );
