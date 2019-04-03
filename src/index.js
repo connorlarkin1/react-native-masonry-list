@@ -236,6 +236,7 @@ class Masonry extends React.PureComponent {
                     onLongPressImage={this.props.onLongPressImage}
 
                     onEndReachedThreshold={this.props.onEndReachedThreshold}
+                    otherStyles={this.props.otherStyles}
                 />
             </View>
         );
