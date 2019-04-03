@@ -54,7 +54,6 @@ export default class MasonryList extends React.PureComponent {
 		onLongPressImage: PropTypes.func,
 
 		onEndReachedThreshold: PropTypes.number,
-		otherStyles: PropTypes.arrayOf
 	};
 
 	state = {
@@ -357,7 +356,7 @@ export default class MasonryList extends React.PureComponent {
 					padding: (this.props.layoutDimensions.width / 100) * this.props.spacing / 2,
 					backgroundColor: this.props.backgroundColor,
 				},this.props.otherStyles]}
-				
+
 				contentContainerStyle={{
 					justifyContent: "space-between",
 					flexDirection: "row",

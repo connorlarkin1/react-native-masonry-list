@@ -55,8 +55,6 @@ class Masonry extends React.PureComponent {
             PropTypes.node
         ]),
         onEndReachedThreshold: PropTypes.number,
-        otherStyles: PropTypes.arrayOf
-
     }
 
     static defaultProps = {
