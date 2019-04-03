@@ -79,7 +79,7 @@ export default class MasonryList extends React.PureComponent {
 	}
 
 	scrollTo = (e = 0) => {
-      this._carousel.scrollToIndex(e);
+      this._carousel?.scrollToIndex?.(e);
   };
 
 	componentWillReceiveProps = (nextProps) => {
