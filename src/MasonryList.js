@@ -352,12 +352,12 @@ export default class MasonryList extends React.PureComponent {
 	render() {
 		return (
 			<FlatList
-				style={{
+				style={[{
 					flex: 1,
 					padding: (this.props.layoutDimensions.width / 100) * this.props.spacing / 2,
 					backgroundColor: this.props.backgroundColor,
-					...this.props.otherStyles
-				}}
+				},this.props.otherStyles]}
+				
 				contentContainerStyle={{
 					justifyContent: "space-between",
 					flexDirection: "row",
