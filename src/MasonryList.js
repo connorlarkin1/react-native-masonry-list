@@ -360,7 +360,8 @@ export default class MasonryList extends React.PureComponent {
 				contentContainerStyle={{
 					justifyContent: "space-between",
 					flexDirection: "row",
-					width: "100%"
+					width: "100%",
+					paddingBottom: 200
 				}}
 				removeClippedSubviews={true}
 				onEndReachedThreshold={this.props.onEndReachedThreshold}
