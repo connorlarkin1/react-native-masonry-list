@@ -235,6 +235,8 @@ class Masonry extends React.PureComponent {
 
                     onEndReachedThreshold={this.props.onEndReachedThreshold}
                     otherStyles={this.props.otherStyles}
+
+                    footer={this.props.footer}
                 />
             </View>
         );

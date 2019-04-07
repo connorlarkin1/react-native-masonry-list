@@ -399,6 +399,8 @@ export default class MasonryList extends React.PureComponent {
 
 							dataLength={this.state._sortedData?.length}
 							currentIndex={index}
+
+							footer={this.props.footer}
 						/>
 					);
 				}}

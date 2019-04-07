@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, Text } from "react-native";
 import PropTypes from "prop-types";
 
 import { getItemSource } from "./utils";
@@ -106,6 +106,8 @@ export default class Column extends React.PureComponent {
 				initialNumToRender={this.props.initialNumInColsToRender}
 				removeClippedSubviews={true}
 				renderItem={this._renderItem}
+				ListFooterComponent={this.props.footer}
+
 			/>
 		);
 	}
