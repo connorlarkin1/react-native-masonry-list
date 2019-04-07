@@ -396,6 +396,9 @@ export default class MasonryList extends React.PureComponent {
 
 							renderIndividualHeader={this.props.renderIndividualHeader}
 							renderIndividualFooter={this.props.renderIndividualFooter}
+
+							dataLength={this.state._sortedData?.length}
+							currentIndex={index}
 						/>
 					);
 				}}

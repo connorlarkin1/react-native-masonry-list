@@ -91,6 +91,7 @@ export default class Column extends React.PureComponent {
 	_keyExtractor = (item, index) => ("IMAGE-CELL-" + index.toString() + "---" + (item.id ? item.id : "0"));
 
 	render() {
+		console.log(this.props.dataLength, this.props.currentIndex)
 		return (
 			<FlatList
 				style={{flex: 1}}
